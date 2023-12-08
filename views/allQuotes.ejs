@@ -1,0 +1,32 @@
+<body>
+    <%- include('header.ejs')%>
+        <div class="main">
+            <%for (quote of quotes){%>
+                <div class="quotes">
+                    <div class="text">
+                        &quot;<%= quote.text %>&quot;
+                    </div>
+
+                    <div class="author">
+                        <%= quote.author %>
+                    </div>
+
+                    <div class="icons">
+
+                        <form method="GET" action="/allQuotes/<%=quote.id%>/edit">
+                            <button><i class="fa-solid fa-pen-to-square"></i></button>
+                        </form>
+
+                        
+                        <form method="POST" action="/allQuotes/<%=quote.id%>?_method=DELETE">
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+
+      
+
+        <%- include('footer.ejs')%>
+</body>

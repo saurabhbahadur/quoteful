@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quoteful</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045_1280.png");
+            background-size: cover;
+        }
+
+        /* Header */
+
+        .header {
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.53);
+            padding: 14px 20px;
+        }
+
+        .header a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-style: italic;
+
+        }
+
+        .header a:hover {
+            color: #d62828;
+            transition: 1s;
+        }
+
+        .header a.logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav {
+            float: right;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .nav {
+                float: none;
+            }
+        }
+
+        /* Main */
+        .main {
+            height: 100svh;
+            overflow: auto;
+        }
+
+        .main-h {
+            margin: auto;
+            margin-top: 3rem;
+            text-align: center;
+            /* background-color: rgb(255, 255, 255); Fallback color */
+            /* background-color: rgba(0, 0, 0, 0.4); */
+            background-color: #eae2b796;
+            /* Black w/opacity/see-through*/
+            z-index: 2;
+            width: fit-content;
+            border-radius: 25px;
+        }
+
+        .main-h h1 {
+            padding: 1rem;
+            font-size: 3rem;
+            color: #f77f00;
+            text-shadow: 2px 2px #003049;
+        }
+
+        .quot {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d62828;
+            text-shadow: 2px 2px #fcbf49;
+            padding: 1rem 2rem;
+            margin: 2rem;
+            /* margin-top: 5rem; */
+        }
+
+        .main-b {
+            padding: 2rem 4rem;
+            margin: 1rem;
+        }
+
+        .main-b a {
+            padding: 1rem 2rem;
+            margin: 1rem;
+            font-size: 2rem;
+            text-decoration: none;
+            background-color: #fcbf49;
+            color: #003049;
+            border: 2px solid #9a752b;
+            border-radius: 25px;
+        }
+
+        .main-b a:hover {
+            background-color: #fcbf49;
+            color: #003049;
+        }
+
+        @media screen and (max-width: 500px) {
+            .main-h {
+                font-size: 0.5rem;
+            }
+
+            .quot {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+                margin: 1rem;
+            }
+
+            .main-b a {
+                font-size: 1rem;
+            }
+
+        }
+
+        .form {
+
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.333);
+
+            margin: auto;
+            margin-top: 3rem;
+            width: fit-content;
+            border-radius: 25px;
+            padding: 2rem 4rem;
+        }
+
+        .btn button {
+            padding: 1rem;
+            border-radius: 25px;
+            border: none;
+            margin: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            background-color: #fcbf49;
+            color: #003049;
+            border: 2px solid #9a752b;
+        }
+
+        .btn button:hover {
+            /* background-color: blueviolet; */
+            color: white;
+            transition: 1s;
+        }
+
+        .pwd textarea {
+            padding: 1rem;
+            border-radius: 25px;
+            border: none;
+            resize: none;
+            margin: 1rem;
+            font-size: 1rem;
+            width: 100%;
+            background-color: #eae2b7;
+        }
+
+        .user p {
+            padding: 10px 15px;
+            margin: 1rem;
+            color: #d62828;
+            text-decoration: underline;
+            font-size: 1.5rem;
+        }
+
+        .back a {
+            display: flex;
+            font-size: 2rem;
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .back a:hover {
+            color: #d62828;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <%- include('header.ejs')%>
+
+        <div class="main">
+            <div class="form">
+                <form action="/allQuotes/<%=quot.id%>?_method=PATCH" method="post">
+                    <div class="back">
+                        <a href="http://localhost:3000/allQuotes"><i class="fa-solid fa-arrow-left-long"></i></a>
+                    </div>
+
+                    <div class="user">
+
+                        <p>
+                            <%= quot.author %>
+                        </p>
+                    </div>
+                    <div class="pwd">
+                        <textarea name="text" id="" cols="35" rows="15">  <%= quot.text %></textarea>
+                    </div>
+                    <div class="btn">
+                        <button>Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+</body>

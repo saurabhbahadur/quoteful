@@ -1,0 +1,21 @@
+<body>
+    <%- include('header.ejs')%>
+    <div class="main">
+        <div class="form">
+            <form action="allQuotes" method="post">
+                <div class="back">
+                    <a href="http://localhost:3000/allQuotes"><i class="fa-solid fa-arrow-left-long"></i></a>
+                </div>
+                <div class="user">
+                    <input type="text" placeholder="Author Name" name="author">
+                </div>
+                <div class="pwd">
+                    <textarea name="text" id="" cols="30" rows="5" placeholder="Your Quot............."></textarea>
+                </div>
+                <div class="btn">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
