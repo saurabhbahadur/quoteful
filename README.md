@@ -39,6 +39,8 @@ const connection = mysql.createConnection({
 });
 ```
 
+#### Create database of `quot` and import data given in database file
+
    ### Home Page:
 ```js
 // setting home page using ejs templates
