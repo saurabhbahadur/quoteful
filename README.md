@@ -3,7 +3,7 @@
 ### QuoteFul contains many inspirational quotes and in this project you can create you own quot or delete or edit others quotes. The main purpose of this project to understand basic understanding of CRUD operation with database. In ths project i used Express JS as backend and My SQL as a database. You can easily check out the function of QuoteFul by clicking demo 🤗
 
 
-## [Demo](https://www.linkedin.com/posts/saurabhbahadur_connections-mernstack-mernstackdevelopment-activity-7132318224523665408--vES?utm_source=share&utm_medium=member_desktop)
+## [Demo](https://www.linkedin.com/posts/saurabhbahadur_mernstack-mernstackdevelopment-nodejs-activity-7138888918044762113-D8Yk?utm_source=share&utm_medium=member_desktop)
 
 
 # Getting Started
